@@ -1,0 +1,21 @@
+
+        Scanner scanner = new Scanner(System.in);
+        
+        boolean entradaValida = false;
+        
+        do {
+            try {
+                System.out.print("Ingrese una cadena de texto: ");
+                String cadena = scanner.nextLine();
+                
+                if (!cadena.isEmpty()) {
+                    System.out.println("Se ha ingresado una cadena de texto válida: " + cadena);
+                    entradaValida = true;
+                } else {
+                    System.out.println("No se ha ingresado una cadena de texto válida. Intente nuevamente.");
+                }
+            } catch (Exception e) {
+                System.out.println("No se ha ingresado una cadena de texto válida. Intente nuevamente.");
+            }
+        } while (!entradaValida);
+      
