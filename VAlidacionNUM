@@ -1,0 +1,18 @@
+
+        Scanner scanner = new Scanner(System.in);
+        
+        boolean entradaValida = false;
+        
+        do {
+            try {
+                System.out.print("Ingrese un número: ");
+                int numero = Integer.parseInt(scanner.nextLine());
+                System.out.println("Se ha ingresado un número válido: " + numero);
+                entradaValida = true;
+            } catch (NumberFormatException e) {
+                System.out.println("No se ha ingresado un número válido. Intente nuevamente.");
+            }
+        } while (!entradaValida);
+        
+        scanner.close();
+ 
